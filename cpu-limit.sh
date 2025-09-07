@@ -90,16 +90,16 @@ cores=$(nproc)
 #   if [ $cores -eq 3 ] || [ $cores -eq 4 ]; then
 #     high_main
 #   else
-#     size=600
+#     size=500
 #     interval=5
-#     MIN_SIZE=400
+#     MIN_SIZE=300
 #     MIN_INTERVAL=1
 #     low_main
 #   fi
 # else
-#   size=450
+#   size=350
 #   interval=10
-#   MIN_SIZE=200
+#   MIN_SIZE=100
 #   MIN_INTERVAL=2
 #   low_main
 # fi
