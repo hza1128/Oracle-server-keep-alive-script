@@ -280,7 +280,7 @@ bandwidth_speedtest_go() {
   cd /root >/dev/null 2>&1
   curl -L https://gitlab.com/hza1128/Oracle-server-keep-alive-script/-/raw/main/bandwidth_occupier.timer -o bandwidth_occupier.timer && chmod +x bandwidth_occupier.timer
   mv bandwidth_occupier.timer /etc/systemd/system/bandwidth_occupier.timer
-  curl -L https://gitlab.com/spiritysdx/Oracle-server-keep-alive-script/-/raw/main/bandwidth_occupier.service -o bandwidth_occupier.service && chmod +x bandwidth_occupier.service
+  curl -L https://gitlab.com/hza1128/Oracle-server-keep-alive-script/-/raw/main/bandwidth_occupier.service -o bandwidth_occupier.service && chmod +x bandwidth_occupier.service
   mv bandwidth_occupier.service /etc/systemd/system/bandwidth_occupier.service
   file_content=$(cat /etc/systemd/system/bandwidth_occupier.service)
   new_file_content=$(echo "$file_content" | sed '7s/.*/ExecStart=\/bin\/bash -c '\''for i in {1..10}; do \/etc\/speedtest-cli\/speedtest-go; done'\''/')
